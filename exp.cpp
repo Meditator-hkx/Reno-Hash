@@ -189,7 +189,7 @@ void runWorkload(int type, uint32_t op_num, int client_order) {
                 else {
                     memcpy(key, buf+2, KEY_SIZE);
                     memcpy(value, buf+2, VALUE_SIZE);
-                    ret = client_update(client_order, key, value);
+                    ret = client_upsert(client_order, key, value);
                 }
             }
         }
@@ -209,7 +209,7 @@ void runWorkload(int type, uint32_t op_num, int client_order) {
                 else {
                     memcpy(key, buf+2, KEY_SIZE);
                     memcpy(value, buf+2, VALUE_SIZE);
-                    ret = client_update(client_order, key, value);
+                    ret = client_upsert(client_order, key, value);
                 }
             }
         }
@@ -224,7 +224,7 @@ void runWorkload(int type, uint32_t op_num, int client_order) {
             if (getline(&buf, &len, fp) != -1) {
                 memcpy(key, buf, KEY_SIZE);
                 memcpy(value, buf, VALUE_SIZE);
-                ret = client_update(client_order, key, value);
+                ret = client_upsert(client_order, key, value);
             }
         }
     }
@@ -236,7 +236,7 @@ void runWorkload(int type, uint32_t op_num, int client_order) {
             if (getline(&buf, &len, fp) != -1) {
                 memcpy(key, buf, KEY_SIZE);
                 memcpy(value, buf, VALUE_SIZE);
-                ret = client_insert(client_order, key, value);
+                ret = client_upsert(client_order, key, value);
             }
         }
 
