@@ -29,10 +29,9 @@ The basic configuration parameters are listed in the `config.h` and `config.cpp`
 
 ## Compile and Try
 
-`cd Reno-Hash`
-
-`make`
-
-`./reno (server-side)`
-
-`./reno (client-side)`
+```
+cd Reno-Hash
+make
+./reno (server-side)
+./reno (client-side)
+```
