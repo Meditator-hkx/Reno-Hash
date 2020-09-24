@@ -638,16 +638,6 @@ int client_write(int order, char *key, char *value, int opcode) {
     return 0;
 }
 
-int client_insert(int order, char *key, char *value) {
-    int opcode = 1;
-    return client_write(order, key, value, opcode);
-}
-
-int client_update(int order, char *key, char *value) {
-    int opcode = 2;
-    return client_write(order, key, value, opcode);
-}
-
 int client_upsert(int order, char *key, char *value) {
     int opcode = 2;
     return client_write(order, key, value, opcode);
