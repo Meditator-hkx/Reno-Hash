@@ -28,13 +28,13 @@ int main() {
     if (LOCAL_NODE == SERVER_NODE) {
         /*
         startTimer(start);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
-        ret = server_insert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
+        ret = server_upsert(key1, value1);
         endTimer(end);
         addToTotalLatency();
         printTotalLatency();
@@ -73,19 +73,19 @@ int main() {
         printTotalLatency();
 
         startTimer(start);
-        ret = client_insert(0, key2, value3);
+        ret = client_upsert(0, key2, value3);
         endTimer(end);
         addToTotalLatency();
         printTotalLatency();
 
         startTimer(start);
-        ret = client_update(0, key1, value2);
+        ret = client_upsert(0, key1, value2);
         endTimer(end);
         addToTotalLatency();
         printTotalLatency();
 
         startTimer(start);
-        ret = client_update(0, key2, value4);
+        ret = client_upsert(0, key2, value4);
         endTimer(end);
         addToTotalLatency();
         printTotalLatency();
